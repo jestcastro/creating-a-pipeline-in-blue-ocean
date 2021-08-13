@@ -27,7 +27,7 @@ pipeline {
 
     stage('yarn') {
       steps {
-        sh 'npm install'
+        sh 'npm install prisma'
       }
     }
 
