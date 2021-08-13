@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('docker') {
+      steps {
+        sh 'docker'
+      }
+    }
+
   }
 }
