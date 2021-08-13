@@ -27,7 +27,8 @@ pipeline {
 
     stage('yarn') {
       steps {
-        sh 'npm install --prefer-offline --no-audit'
+        sh '''cd ${WORKSPACE}
+npm install --prefer-offline --no-audit'''
       }
     }
 
