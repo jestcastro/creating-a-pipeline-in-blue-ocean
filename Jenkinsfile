@@ -1,9 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Create File') {
       steps {
-        mail(subject: 'Hello', body: 'Hello', from: 'johnn@firstfactory.com', to: 'johnn@firstfactory.com')
+        sh 'touch foo.bar'
+      }
+    }
+
+    stage('LS files') {
+      steps {
+        sh 'ls'
       }
     }
 
