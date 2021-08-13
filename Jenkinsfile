@@ -19,5 +19,17 @@ pipeline {
       }
     }
 
+    stage('sh') {
+      steps {
+        sh 'node -v'
+      }
+    }
+
+    stage('yarn') {
+      steps {
+        sh 'yarn'
+      }
+    }
+
   }
 }
