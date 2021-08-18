@@ -27,7 +27,9 @@ pipeline {
 
     stage('yarn') {
       steps {
-        sh 'pwd'
+        sh '''cd ..
+pwd
+ls'''
       }
     }
 
