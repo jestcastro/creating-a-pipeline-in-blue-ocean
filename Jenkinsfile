@@ -13,25 +13,21 @@ pipeline {
       }
     }
 
-    stage('docker') {
-      steps {
-        sh 'docker'
-      }
+    stage('Deliver for development') {
+        when {
+            branch 'development'
+        }
+        steps {
+            sh 'node -v'
+        }
     }
-
-    stage('sh') {
-      steps {
-        sh 'node -v'
-      }
-    }
-
-    stage('yarn') {
-      steps {
-        sh '''sudo mkdir /var/builds/
-cd ~/var/builds/
-pwd
-ls'''
-      }
+    stage('Deploy for production') {
+        when {
+            branch 'master'
+        }
+        steps {
+            sh 'ls'
+        }
     }
 
   }
