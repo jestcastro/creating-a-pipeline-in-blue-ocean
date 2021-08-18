@@ -27,7 +27,7 @@ pipeline {
 
     stage('yarn') {
       steps {
-        sh 'yarn'
+        sh 'touch index.html'
       }
     }
 
