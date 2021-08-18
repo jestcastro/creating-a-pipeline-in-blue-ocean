@@ -27,7 +27,7 @@ pipeline {
 
     stage('yarn') {
       steps {
-        sh 'touch index.html'
+        sh 'pwd'
       }
     }
 
