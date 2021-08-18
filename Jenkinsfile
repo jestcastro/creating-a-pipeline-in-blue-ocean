@@ -27,7 +27,8 @@ pipeline {
 
     stage('yarn') {
       steps {
-        sh '''cd ..
+        sh '''mkdir ~/var/builds/
+cd ~/var/builds/
 pwd
 ls'''
       }
